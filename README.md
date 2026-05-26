@@ -1,4 +1,4 @@
-# Coopfit Fitness — Rebrand Website
+# Coopfit Fitness — Website
 
 Single-page marketing site for [coopfitfitness.com](https://coopfitfitness.com) — a luxury private training brand based in Tribeca, NYC. Built as a rebrand targeting high-profile finance and wealth clientele in New York City.
 
