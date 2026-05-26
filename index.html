@@ -536,85 +536,6 @@
     }
     .stat-sub { font-size: 13px; color: var(--ink-mute); }
 
-    /* ── Trusted ──────────────────────────────────────────────────── */
-    #clients { padding: 160px 0 100px; background: var(--bg-0); }
-    .trusted-grid {
-      margin-top: 80px;
-      display: grid;
-      grid-template-columns: 1.4fr 1fr 1fr;
-      grid-template-rows: 240px 240px;
-      gap: 16px;
-    }
-    .client-tile {
-      position: relative;
-      overflow: hidden;
-      cursor: default;
-    }
-    .client-tile img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: center top;
-      filter: grayscale(0.5) contrast(1.05);
-      transition: filter 0.6s var(--ease-out), transform 0.8s var(--ease-out);
-    }
-    .client-tile:hover img { filter: grayscale(0) contrast(1.05); transform: scale(1.05); }
-    .client-tile-gradient {
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(180deg, transparent 50%, rgba(10,9,8,0.92));
-      pointer-events: none;
-    }
-    .client-tile-info {
-      position: absolute;
-      left: 20px;
-      bottom: 20px;
-      right: 20px;
-      transform: translateY(6px);
-      transition: transform 0.5s var(--ease-out);
-    }
-    .client-tile:hover .client-tile-info { transform: translateY(0); }
-    .client-tile-name {
-      font-family: var(--ff-display);
-      font-size: 22px;
-      font-weight: 600;
-      color: var(--ink);
-      letter-spacing: -0.01em;
-      text-transform: none;
-    }
-    .client-tile-role {
-      font-family: var(--ff-mono);
-      font-size: 10px;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      color: var(--accent);
-      margin-top: 6px;
-    }
-    .trusted-roster {
-      margin-top: 64px;
-      padding-top: 36px;
-      border-top: 1px solid var(--line);
-      display: grid;
-      grid-template-columns: 1fr 2fr;
-      gap: 48px;
-      align-items: start;
-    }
-    .trusted-roster-label {
-      font-family: var(--ff-mono);
-      font-size: 11px;
-      letter-spacing: 0.22em;
-      text-transform: uppercase;
-      color: var(--accent);
-    }
-    .trusted-roster-text {
-      font-family: var(--ff-display);
-      font-size: 22px;
-      font-weight: 400;
-      line-height: 1.4;
-      color: var(--ink);
-      letter-spacing: -0.005em;
-    }
-
     /* ── Testimonials ─────────────────────────────────────────────── */
     #testimonials { padding: 140px 0; background: var(--bg-1); }
     .testi-header {
@@ -1194,7 +1115,6 @@
       .services-grid { grid-template-columns: 1fr; }
       .stats-grid { grid-template-columns: 1fr 1fr; }
       .stat-item:nth-child(2), .stat-item:nth-child(4) { border-right: none; }
-      .trusted-grid { grid-template-columns: 1fr 1fr; grid-template-rows: 200px 200px 200px; }
       .testi-row { grid-template-columns: 1fr; gap: 40px; }
       .about-grid { grid-template-columns: 1fr; gap: 40px; }
       .creds-grid { grid-template-columns: repeat(2, 1fr); }
@@ -1202,7 +1122,6 @@
       .contact-grid { grid-template-columns: 1fr; gap: 60px; }
       .foot-grid { grid-template-columns: 1fr 1fr; }
       .foot-bottom { flex-direction: column; align-items: flex-start; }
-      .trusted-roster { grid-template-columns: 1fr; gap: 20px; }
     }
     @media (max-width: 560px) {
       .pillars-grid { grid-template-columns: 1fr; }
@@ -1442,57 +1361,6 @@
         <div class="stat-label">Phone-free sessions</div>
         <div class="stat-sub">Eyes on you, every minute</div>
       </div>
-    </div>
-  </div>
-</section>
-
-<!-- ── Trusted ────────────────────────────────────────────────────────── -->
-<section id="clients">
-  <div class="container">
-    <div class="section-head reveal-stagger">
-      <span class="eyebrow">Selected clients</span>
-      <h2 class="display">Coaches you<br>through every<br><em style="font-style:italic;font-family:'Archivo Narrow';font-weight:700">title change.</em></h2>
-      <p class="sub">A quiet roster — executives, founders, on-screen talent — built over twenty-two years of word-of-mouth referrals. A few are happy to be named.</p>
-    </div>
-
-    <div class="trusted-grid">
-      <div class="client-tile img-mask" style="grid-row:1/3">
-        <img src="https://coopfitfitness.com/wp-content/uploads/2025/08/jksimmons3.jpg" alt="J.K. Simmons" />
-        <div class="client-tile-gradient"></div>
-        <div class="client-tile-info">
-          <div class="client-tile-name">J.K. Simmons</div>
-          <div class="client-tile-role">Academy Award–winning actor</div>
-        </div>
-      </div>
-      <div class="client-tile img-mask" style="grid-row:1/3">
-        <img src="https://coopfitfitness.com/wp-content/uploads/2025/08/davidharbor.jpg" alt="David Harbour" />
-        <div class="client-tile-gradient"></div>
-        <div class="client-tile-info">
-          <div class="client-tile-name">David Harbour</div>
-          <div class="client-tile-role">Actor · Stranger Things</div>
-        </div>
-      </div>
-      <div class="client-tile img-mask">
-        <img src="https://coopfitfitness.com/wp-content/uploads/2016/07/Robert_L.png" alt="Estée Lauder Exec" />
-        <div class="client-tile-gradient"></div>
-        <div class="client-tile-info">
-          <div class="client-tile-name">Estée Lauder Exec</div>
-          <div class="client-tile-role">Former WW Creative Director</div>
-        </div>
-      </div>
-      <div class="client-tile img-mask">
-        <img src="https://coopfitfitness.com/wp-content/uploads/2020/12/Stan.png" alt="Columbia Medicine" />
-        <div class="client-tile-gradient"></div>
-        <div class="client-tile-info">
-          <div class="client-tile-name">Columbia Medicine</div>
-          <div class="client-tile-role">Associate Professor</div>
-        </div>
-      </div>
-    </div>
-
-    <div class="trusted-roster">
-      <div class="trusted-roster-label">Also working with</div>
-      <div class="trusted-roster-text">Wall&nbsp;Street managing&nbsp;directors. Hedge-fund principals. Tribeca residents. SoHo gallerists. A&nbsp;handful of names on jerseys, billboards, and prestige TV. Discretion&nbsp;is the&nbsp;default.</div>
     </div>
   </div>
 </section>
